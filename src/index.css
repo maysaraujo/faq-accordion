@@ -1,4 +1,25 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-size: 16px;
 }

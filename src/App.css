@@ -1,0 +1,48 @@
+.background {
+  background: url(/images/background-pattern-desktop.svg) no-repeat;
+  background-size: contain;
+  background-color: var(--light-pink);
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: var(--white);
+  max-width: 560px;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.container .title {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.container .title h1 {
+  font-size: 48px;
+  color: var(--black);
+}
+
+.container .list-item .question-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .list-item .question-item h2 {
+  font-size: 18px;
+  color: var(--black);
+}
+
+.container .list-item .answer-item p {
+  margin-top: 25px;
+}
+
+.line {
+  border-bottom: 1px solid var(--light-pink);
+  margin: 10px 0;
+}

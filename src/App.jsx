@@ -1,15 +1,8 @@
-import IconStar from './assets/images/icon-star.svg';
 import './App.css';
+import Faq from './components/Faq';
 
 function App() {
-  return (
-    <div className='container'>
-      <div className='title'>
-        <img src={IconStar} alt='Icon star' />
-        <h1>FAQs</h1>
-      </div>
-    </div>
-  );
+  return <Faq />;
 }
 
 export default App;
