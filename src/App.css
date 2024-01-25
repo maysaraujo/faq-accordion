@@ -31,11 +31,24 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .container .list-item .question-item h2 {
   font-size: 18px;
   color: var(--black);
+}
+
+.container .list-item .answer-item {
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s;
+}
+
+.container .list-item .answer-item.show {
+  height: auto;
+  max-height: 9999px;
+  transition: all .5s;
 }
 
 .container .list-item .answer-item p {

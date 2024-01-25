@@ -4,7 +4,6 @@ import IconMinus from '/images/icon-minus.svg';
 import { useState } from 'react';
 
 const Faq = () => {
-  const [open, setOpen] = useState('');
   const [accordions, setAccordions] = useState([
     {
       id: 1,
@@ -26,12 +25,15 @@ const Faq = () => {
     },
     {
       id: 4,
-      question:
-        "How can I get help if I'm stuck on a challenge?",
+      question: "How can I get help if I'm stuck on a challenge?",
       answer:
         "The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members.",
     },
   ]);
+
+  const toggle = (i) => {
+    if ()
+  }
 
   return (
     <div className='background'>
@@ -47,9 +49,9 @@ const Faq = () => {
                 <h2>{acc.question}</h2>
                 <img src={IconPlus} alt='Icon Plus' />
               </div>
+              <div className='line'></div>
               <div className='answer-item'>
                 <p>{acc.answer}</p>
-                <div className="line"></div>
               </div>
             </div>
           ))}
