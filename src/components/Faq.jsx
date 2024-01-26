@@ -16,7 +16,7 @@ const Faq = () => {
       id: 2,
       question: 'Is Frontend Mentor free?',
       answer:
-        'Yes, Frontend Mentor offers both free and premium coding challenges, with the free option providing access to a range of projects suitable for all skill levels.',
+        'Yes, Frontend Mentor offers both free and premium coding challenges, with the free option providing itemess to a range of projects suitable for all skill levels.',
     },
     {
       id: 3,
@@ -44,14 +44,14 @@ const Faq = () => {
     <div className='background'>
       <div className='container'>
         <div className='title'>
-          <img src={IconStar} alt='Icon star' />
+          <img width={35} src={IconStar} alt='Icon star' />
           <h1>FAQs</h1>
         </div>
         <ul className='list'>
-          {data.map((acc, i) => (
-            <div key={acc.id} className='list-item'>
+          {data.map((item, i) => (
+            <div key={item.id} className='list-item'>
               <div onClick={() => toggle(i)} className='question-item'>
-                <h2>{acc.question}</h2>
+                <h2>{item.question}</h2>
                 <span>
                   {open === i ? (
                     <img src={IconMinus} alt='Icon Minus' />
@@ -61,7 +61,7 @@ const Faq = () => {
                 </span>
               </div>
               <div className='answer-item'>
-                {open === i ? <p>{acc.answer}</p> : null}
+                {open === i ? <p>{item.answer}</p> : null}
               </div>
               <div className='line'></div>
             </div>
