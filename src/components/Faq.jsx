@@ -5,7 +5,6 @@ import { useState } from 'react';
 
 const Faq = () => {
   const [open, setOpen] = useState(false);
-
   const data = [
     {
       id: 1,
@@ -33,6 +32,14 @@ const Faq = () => {
     },
   ];
 
+  const toggle = (i) => {
+    if (open === i) {
+      return setOpen(null);
+    }
+
+    setOpen(i);
+  };
+
   return (
     <div className='background'>
       <div className='container'>
@@ -41,20 +48,22 @@ const Faq = () => {
           <h1>FAQs</h1>
         </div>
         <ul className='list'>
-          {data.map((acc) => (
+          {data.map((acc, i) => (
             <div key={acc.id} className='list-item'>
-              <div onClick={() => setOpen(!open)} className='question-item'>
+              <div onClick={() => toggle(i)} className='question-item'>
                 <h2>{acc.question}</h2>
-                {open ? (
-                  <img src={IconMinus} alt='Icon Minus' />
-                ) : (
-                  <img src={IconPlus} alt='Icon Plus' />
-                )}
+                <span>
+                  {open === i ? (
+                    <img src={IconMinus} alt='Icon Minus' />
+                  ) : (
+                    <img src={IconPlus} alt='Icon Plus' />
+                  )}
+                </span>
+              </div>
+              <div className='answer-item'>
+                {open === i ? <p>{acc.answer}</p> : null}
               </div>
               <div className='line'></div>
-              <div className='answer-item'>
-                <p>{acc.answer}</p>
-              </div>
             </div>
           ))}
         </ul>
