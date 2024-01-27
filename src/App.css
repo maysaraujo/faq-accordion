@@ -71,5 +71,7 @@
 @media (max-width: 375px) {
   .background {
     background: url(/images/background-pattern-mobile.svg) no-repeat;
+    background-color: var(--light-pink);
+    background-size: contain;
   }
 }
